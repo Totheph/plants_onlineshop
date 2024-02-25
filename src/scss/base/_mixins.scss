@@ -1,0 +1,65 @@
+%transition{
+  transition: all 1s ease;
+}
+
+@mixin mediaTablet {
+  @media screen and (max-width: $tablet-size) {
+    @content;
+  }
+}
+
+@mixin mediaMedium {
+  @media screen and (max-width: $medium-size) {
+    @content;
+  }
+}
+
+@mixin mediaPhone {
+  @media screen and (max-width: $phone-size) {
+    @content;
+  }
+}
+
+@mixin sectionSubtitle($fz, $color){
+  font-weight: 700;
+  font-size: $fz;
+  color: $color;
+}
+
+@mixin centeredColumn{
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin border($color){
+  border-bottom: 2px solid $color;
+}
+
+@mixin button($bg, $font-color){
+  position: relative;
+  background-color: $bg;
+  color: $font-color;
+  padding: 12px 58px 12px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  position: relative;
+  max-width: 80%;
+  width: fit-content;
+  &::after {
+    content: "";
+    background: url("./../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    width: 21px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15%;
+  }
+}

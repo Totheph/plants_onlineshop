@@ -1,0 +1,39 @@
+//Reviews
+.reviews {
+  padding-top: 96px;
+  @include mediaTablet {
+    padding-top: 65px;
+  }
+  &__title {
+    max-width: 80%;
+  }
+  &__row {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__rate {
+    font-weight: 700;
+    font-size: 24px;
+    position: relative;
+    &::before {
+      content: "\2605";
+      font-size: 24px;
+      position: absolute;
+      right: 150%;
+      bottom: 5%;
+    }
+  }
+  &__card {
+    max-width: 800px;
+    height: 330px;
+    background-color: var(--accent);
+    border-radius: 12px;
+    padding: 48px;
+    position: relative;
+    @include mediaTablet {
+      padding: 24px;
+      font-size: 16px;
+    }
+  }
+}

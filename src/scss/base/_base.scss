@@ -1,0 +1,46 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color:f var(--page-bg);
+	color: var(--text-color);
+	font-family: var(--font-main);
+	font-weight: 500;
+	font-size: var(--font-size);
+}
+
+.section-title {
+	font-weight: 800;
+	font-size: clamp(18px, 24px, 32px);
+	margin-bottom: 12px;
+}
+.section-heading {
+	margin-bottom: 48px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.section-subtitle {
+	color: var(--black);
+	font-weight: 700;
+	margin-bottom: 12px;
+}
+
+.section-text {
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 18px;
+}
+
+picture{
+	height: 20px;
+}
+
+.button {
+	transition: all 0.5s ease;
+	&:hover {
+		transform: scale(1.1);
+	}
+}

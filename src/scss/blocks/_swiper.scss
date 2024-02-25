@@ -1,0 +1,29 @@
+.swiper {
+  margin-top: 25px;
+  margin-bottom: 230px;
+  position: relative;
+
+  @include mediaTablet {
+    margin-bottom: 75px;
+  }
+
+  &-buttons {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+
+  &-button-next {
+    background-image: url("./../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    &::after {
+      content: "";
+    }
+  }
+
+  &-slide {
+    display: flex;
+    justify-content: center;
+  }
+}

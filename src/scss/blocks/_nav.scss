@@ -1,0 +1,39 @@
+//Navigation
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__list {
+    display: flex;
+    gap: var(--gap);
+  }
+  &__list--left {
+    display: flex;
+    @include mediaTablet {
+      display: none;
+    }
+  }
+  &__list-right{
+    gap: var(--gap-big);
+  }
+  &__btns {
+    display: flex;
+    gap: var(--gap);
+    @include mediaTablet {
+      display: none;
+    }
+  }
+  &__link {
+    &--active {
+      color: rgb(var(--black));
+    }
+    color: rgba(var(--black), 0.5);
+    font-weight: 400;
+    @include border(transparent);
+    @extend %transition;
+    &:hover {
+      color: rgb(var(--black));
+      @include border(var(--accent));
+    }
+  }
+}

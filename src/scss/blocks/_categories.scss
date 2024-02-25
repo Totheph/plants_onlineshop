@@ -1,0 +1,49 @@
+//Categories
+.categories {
+  &__cards-wrapper {
+    background-color: var(--accent);
+    width: 100%;
+  }
+  &__cards {
+    padding-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 101px;
+    gap: calc(var(--gap) / 2);
+    @media screen and (max-width: 520px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__card {
+    @include centeredColumn;
+    gap: calc(var(--gap) / 4);
+    max-width: 352px;
+  }
+  &__card-img img {
+    @extend %transition;
+  }
+  &__card:hover .categories__card-img img {
+    transform: scale(1.1);
+  }
+  &__card-img {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+  }
+  &__card-title {
+    width: fit-content;
+    border-bottom: 2px solid transparent;
+    @extend %transition;
+  }
+  &__card:hover .categories__card-title {
+    @include border(var(--page-bg));
+  }
+  &__card-desciption {
+    @include mediaTablet {
+      font-size: 16px;
+    }
+  }
+  &__card-link {
+    @include button(var(--page-bg), var(--black));
+}
+}

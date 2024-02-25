@@ -1,0 +1,124 @@
+//Search section
+.search {
+  &__wrapper {
+    background-color: var(--accent);
+    border-radius: var(--border-radius);
+    padding: clamp(8px, 24px, 48px);
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include mediaTablet {
+      gap: 40px;
+    }
+
+    @include mediaMedium {
+      justify-content: center;
+    }
+
+    @include mediaPhone {
+      padding: 18px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: clamp(18px, 64px, 64px);
+    margin-bottom: 24px;
+
+    @media screen and (max-width: 900px) {
+      font-size: 40px;
+    }
+    @include mediaTablet {
+      text-align: center;
+      font-size: 36px;
+    }
+  }
+  &__benefits {
+    display: flex;
+    gap: var(--gap);
+    margin-bottom: clamp(18px, 36px, 48px);
+
+    @include mediaMedium {
+      gap: calc(var(--gap) / 2);
+      justify-content: center;
+    }
+  }
+
+  &__benefits-number {
+    font-size: clamp(20px, 24px, 32px);
+    font-weight: 500;
+  }
+
+  dd {
+    @include mediaPhone {
+      font-size: 14px;
+    }
+  }
+  &__searchbar-input {
+    width: 100%;
+  }
+
+  &__searchbar {
+    background-color: var(--page-bg);
+    max-width: 450px;
+    border-radius: var(--border-radius-small);
+    padding: 19px;
+    margin-bottom: clamp(36px, 65px, 125px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    @include mediaPhone {
+      width: 280px;
+      margin: 0 auto;
+    }
+  }
+  &__searchbar:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    height: 28px;
+    width: 80%;
+    background-color: var(--searchbar-bg);
+    border-left: 2px solid var(--searchbar-border);
+    animation: animate 3s steps(12) infinite;
+  }
+
+  @keyframes animate {
+    40%,
+    60% {
+      left: calc(57% + 7.5px);
+    }
+    100% {
+      left: 5%;
+    }
+  }
+  &__link {
+    background-color: var(--accent);
+    position: relative;
+    padding: 14px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+  }
+
+  &__image {
+    height: fit-content;
+    @include mediaMedium {
+      display: none;
+    }
+  }
+}

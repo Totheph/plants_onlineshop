@@ -1,0 +1,18 @@
+.header {
+	background-color: var(--page-bg);
+	padding: 48px 0;
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__left {
+		display: flex;
+		align-items: center;
+		gap: var(--gap-big);
+	}
+	&__list{
+		display: flex;
+		gap: var(--gap);
+	}
+}

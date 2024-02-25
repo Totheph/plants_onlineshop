@@ -1,0 +1,17 @@
+//About section
+.about {
+  padding-top: 113px;
+  margin-bottom: 165px;
+
+  @include mediaTablet {
+    padding-top: 65px;
+    margin-bottom: 85px;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: calc(var(--gap) / 2);
+  }
+}

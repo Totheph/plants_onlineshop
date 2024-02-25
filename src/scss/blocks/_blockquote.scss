@@ -1,0 +1,42 @@
+.blockquote {
+  position: relative;
+  &::before {
+    content: "\201C";
+    font-size: 100px;
+    position: absolute;
+    top: 80%;
+    height: 40px;
+    left: 0;
+    @include mediaPhone {
+      font-size: 75px;
+      top: 90%;
+    }
+  }
+  &__person {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__row {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include mediaPhone {
+      bottom: 10%;
+    }
+  }
+
+  &__person-img {
+    @include mediaPhone {
+      display: none;
+    }
+  }
+
+  &__name {
+    margin-bottom: 0;
+  }
+}

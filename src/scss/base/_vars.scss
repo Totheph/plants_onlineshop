@@ -1,0 +1,24 @@
+:root {
+	--container-width: 1280px;
+	--container-padding: 15px;
+
+	--font-main: 'Poppins', sans-serif;
+	--font-accent: 'Playfair Display', serif;
+	--font-size: 18px;
+
+	--gap: 48px;
+	--gap-big: 96px;
+
+	--page-bg: #fff;
+	--border-radius: 24px;
+	--border-radius-small: 12px;
+	--black: 0, 0, 0;
+	--text-color: #1E1E1E;
+	--accent: #C1DCDC;
+	--searchbar-bg: #fff;
+	--searchbar-border: #C1DCDC;
+}
+
+$tablet-size: 860px;
+$medium-size: 700px;
+$phone-size: 380px;

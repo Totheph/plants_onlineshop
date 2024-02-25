@@ -1,0 +1,70 @@
+//Bestsellers
+.bestsellers {
+  padding-top: 96px;
+
+  @include mediaTablet {
+    padding-top: 48px;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+
+    @include mediaTablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__btn {
+    @include button(var(--accent), var(--black));
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: (25%, 25%, 60%);
+    @include mediaTablet {
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    gap: 48px;
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+
+  &__card-img img {
+    @extend %transition;
+  }
+
+  &__card:hover .bestsellers__card-img img {
+    transform: scale(1.1);
+  }
+
+  &__plant-link {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__card-img {
+    overflow: hidden;
+  }
+
+  &__name {
+    @include sectionSubtitle(var(--font-size), var(--text-color));
+    width: fit-content;
+    @include border(transparent);
+    @extend %transition;
+  }
+
+  &__card:hover .bestsellers__name {
+    @include border(var(--accent));
+  }
+}
