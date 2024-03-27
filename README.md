@@ -1,7 +1,7 @@
 # 🌱Plants online store🌳
 Layout of the landing site of the online plant store based on a minimalistic layout from Figma. I added some GSAP animations and swiper.
 
-👉[https://m-anttt.github.io/plants_onlineshop/](https://totheph.github.io/plants_onlineshop/)
+👉[https://m-anttt.github.io/plants_onlineshop/](https://m-anttt.github.io/plants_onlineshop/)
 
 ## Here are the languages, technologies and tools I used to organize my work:
 
